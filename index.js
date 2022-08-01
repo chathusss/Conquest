@@ -67,7 +67,13 @@ function sendData() {
 
                 fetch("https://developolis.conquest.live:444/api/documents/add_document", requestOptions2)
                     .then(response => response.text())
-                    .then(result2 => console.log(result2))
+                    .then(result2 => {
+                        if (result2 !== null) {
+                            console.log(result2)
+                            swal("Request Send Successfully!", "Request Image Upload Successfully", "success");
+                        }
+
+                    })
                     .catch(error => console.log('error', error));
             })
             .catch(error => console.log('error', error));
