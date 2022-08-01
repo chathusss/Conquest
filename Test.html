@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        <!-- Plugins css-->
+        <link href="assets/plugins/sweet-alert2/sweetalert2.min.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/components.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+        <script src="assets/js/modernizr.min.js"></script>
+		<link href="assets/plugins/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet" />
+	<style type="text/css">
+
+	::selection { background-color: #E13300; color: white; }
+	::-moz-selection { background-color: #E13300; color: white; }
+
+	body {
+		background-color: #fff;
+		margin: 40px;
+		font: 13px/20px normal Helvetica, Arial, sans-serif;
+		color: #4F5155;
+	}
+ */
+
+	#body {
+		margin: 0 15px 0 15px;
+		min-height: 96px;
+	}
+	.card-box {
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-left: 10px; /* Added */
+}
+#row1{
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-left: 400px; /* Added */
+}
+#successMessage {
+    display:none;
+}
+#errorMessage {
+    display:none;
+}
+	</style>
+</head>
+<body>
+                    <div class="col-sm-12">
+                        <div class="card-box">                           
+                            <div class="row" id="row1">
+                                <div class="col-md-6">
+                                    <div class="p-20">
+									<form action="#" data-parsley-validate novalidate>
+                                <div class="form-group">
+                                    <label for="userName">Requester Name</label>
+                                    <input   type="text" name="requester" parsley-trigger="change" required placeholder="Enter requester name" class="form-control" id="reqName">
+                                </div>
+                                <div class="form-group">
+                                    <label for="emailAddress">Request</label>
+                                    <input type="text" parsley-trigger="change" required placeholder="Enter request" class="form-control" id="request">
+                                </div>
+                                <div class="form-group">
+								<label for="orgUnit">Organization Unit</label>
+								<select id="orgUnit" class="selectpicker show-tick" data-style="btn-white">
+                                            <option value="0">Developolis</option>
+                                            <option value="1">First Organization Unit</option>
+                                            <option value="2">Justin</option>
+                                        </select>
+                                </div>
+                                            <div class="form-group">
+                                              <label for="imgdesc">Image Description</label>
+                                              <textarea id="textarea" class="form-control" maxlength="225" rows="2" placeholder="This textarea has a limit of 225 chars."></textarea>
+                                            </div>                                        
+                                <div class="form-group text-right m-b-0">
+                                    <input type="button" id='getData' class="btn btn-primary waves-effect waves-light"  onclick="sendData()" value="Send Data">
+								<!--	<input type="button" id='imageupload' class="btn btn-primary waves-effect waves-light" onclick="sendImage()" value="Send Image"> -->
+                                </div>
+                            </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+<!-- jquery import for the UI -->
+<script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/plugins/bootstrap-filestyle/js/bootstrap-filestyle.min.js" type="text/javascript"></script>
+		<script src="assets/plugins/bootstrap-select/js/bootstrap-select.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="assets/plugins/parsleyjs/parsley.min.js"></script>
+      <!-- Sweet-Alert  -->
+      <script src="assets/plugins/sweet-alert2/sweetalert2.min.js"></script>
+      <script src="assets/pages/jquery.sweet-alert2.init.js"></script>
+        <!-- App core js -->
+        <script src="assets/js/jquery.core.js"></script>
+        <script src="assets/js/jquery.app.js"></script>
+        <!--  -->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('form').parsley();
+			});
+		</script>
+        <script src="index.js"></script>
+<script>
+
+</script>
+		
+</body>
+</html>
+
