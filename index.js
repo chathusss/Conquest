@@ -71,6 +71,8 @@ function sendData() {
                         if (result2 !== null) {
                             console.log(result2)
                             swal("Request Send Successfully!", "Request Image Upload Successfully", "success");
+
+
                         }
 
                     })
@@ -78,7 +80,7 @@ function sendData() {
             })
             .catch(error => console.log('error', error));
 
-
+        setTimeout(location.reload.bind(location), 4000);
 
     }
 
